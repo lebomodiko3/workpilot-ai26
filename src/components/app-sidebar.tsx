@@ -15,11 +15,11 @@ export function AppSidebar() {
   const pathname = useRouterState({ select: (r) => r.location.pathname });
 
   return (
-    <aside className="hidden w-72 shrink-0 flex-col border-r-4 border-[#1b4332] bg-[#0d1b2a] p-8 md:flex">
+    <aside className="hidden w-72 shrink-0 flex-col border-r-4 border-[#2d2d2d] bg-[#1a1a1a] p-8 md:flex">
       <div className="mb-12">
         <Link to="/" className="block">
-          <h1 className="font-display text-2xl leading-none text-[#73ffb8]">WORKPILOT</h1>
-          <p className="mt-1 text-[10px] font-bold tracking-[0.2em] text-[#2dd4a8]">
+          <h1 className="font-display text-2xl leading-none text-[#f5f5f5]">WORKPILOT</h1>
+          <p className="mt-1 text-[10px] font-bold tracking-[0.2em] text-[#e85d3a]">
             PRODUCTIVITY SUITE
           </p>
         </Link>
@@ -27,7 +27,7 @@ export function AppSidebar() {
 
       <nav className="flex-1 space-y-6">
         <div>
-          <p className="mb-4 text-xs font-bold uppercase tracking-widest text-[#73ffb8] opacity-50">
+          <p className="mb-4 text-xs font-bold uppercase tracking-widest text-[#f5f5f5] opacity-50">
             Workspace
           </p>
           <ul className="space-y-1">
@@ -40,8 +40,8 @@ export function AppSidebar() {
                     to={item.url}
                     className={`-mx-4 flex items-center gap-3 px-4 py-2 transition-opacity ${
                       active
-                        ? "border-l-4 border-[#2dd4a8] bg-[#1b4332] font-semibold text-[#73ffb8]"
-                        : "border-l-4 border-transparent text-[#2dd4a8] opacity-70 hover:opacity-100"
+                        ? "border-l-4 border-[#e85d3a] bg-[#2d2d2d] font-semibold text-[#f5f5f5]"
+                        : "border-l-4 border-transparent text-[#e85d3a] opacity-70 hover:opacity-100"
                     }`}
                   >
                     <Icon className="h-4 w-4" />
@@ -56,8 +56,8 @@ export function AppSidebar() {
 
       <div className="space-y-4 pt-8">
         <ThemeToggle />
-        <div className="flex items-center gap-3 border-t border-[#1b4332] pt-4 text-sm text-[#2dd4a8]">
-          <div className="h-3 w-3 animate-pulse rounded-full bg-[#73ffb8]" />
+        <div className="flex items-center gap-3 border-t border-[#2d2d2d] pt-4 text-sm text-[#e85d3a]">
+          <div className="h-3 w-3 animate-pulse rounded-full bg-[#f5f5f5]" />
           <span>System Active</span>
         </div>
       </div>

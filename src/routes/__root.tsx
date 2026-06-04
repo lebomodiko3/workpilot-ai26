@@ -121,17 +121,17 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <SidebarProvider>
-        <div className="flex min-h-screen w-full bg-[#0d1b2a] p-4 md:p-8">
-          <div className="flex w-full max-w-[1600px] mx-auto border-4 border-[#1b4332] shadow-[16px_16px_0px_0px_#1b4332] overflow-hidden">
+        <div className="flex min-h-screen w-full bg-[#1a1a1a] p-4 md:p-8">
+          <div className="flex w-full max-w-[1600px] mx-auto border-4 border-[#2d2d2d] shadow-[16px_16px_0px_0px_#2d2d2d] overflow-hidden">
             <AppSidebar />
             <div className="flex min-h-[calc(100vh-4rem)] flex-1 flex-col">
-              <header className="sticky top-0 z-20 flex h-14 items-center gap-3 border-b-2 border-[#1b4332] bg-[#0d1b2a] px-6">
-                <SidebarTrigger className="text-[#73ffb8] hover:bg-[#1b4332]" />
-                <span className="font-display text-xs uppercase tracking-[0.2em] text-[#2dd4a8]">
+              <header className="sticky top-0 z-20 flex h-14 items-center gap-3 border-b-2 border-[#2d2d2d] bg-[#1a1a1a] px-6">
+                <SidebarTrigger className="text-[#f5f5f5] hover:bg-[#2d2d2d]" />
+                <span className="font-display text-xs uppercase tracking-[0.2em] text-[#e85d3a]">
                   AI Workplace Productivity Assistant
                 </span>
               </header>
-              <main className="flex-1 overflow-auto bg-[#0d1b2a]">
+              <main className="flex-1 overflow-auto bg-[#1a1a1a]">
                 <Outlet />
               </main>
             </div>
