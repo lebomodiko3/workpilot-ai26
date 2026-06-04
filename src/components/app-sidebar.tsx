@@ -3,6 +3,7 @@ import { LayoutDashboard, Mail, FileText, ListTodo, Search, MessageSquare, Spark
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
@@ -11,6 +12,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const items = [
   { title: "Dashboard", url: "/", icon: LayoutDashboard },
@@ -64,6 +66,9 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+      <SidebarFooter className="border-t border-sidebar-border p-2">
+        <ThemeToggle />
+      </SidebarFooter>
     </Sidebar>
   );
 }
