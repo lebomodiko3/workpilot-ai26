@@ -24,7 +24,7 @@ const tools = [
 function Dashboard() {
   return (
     <div className="mx-auto max-w-7xl space-y-8 px-6 py-8">
-      <section className="overflow-hidden rounded-2xl gradient-primary p-8 shadow-elegant">
+      <section className="overflow-hidden rounded-2xl border-4 border-neutral-700 gradient-primary p-8 shadow-elegant">
         <div className="flex items-start gap-3">
           <div className="rounded-lg bg-white/15 p-2 backdrop-blur">
             <Sparkles className="h-5 w-5 text-primary-foreground" />
