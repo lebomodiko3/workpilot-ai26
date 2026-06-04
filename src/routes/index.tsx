@@ -1,5 +1,32 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Mail, FileText, ListTodo, Search, MessageSquare } from "lucide-react";
+import { useEffect, useState } from "react";
+
+const FULL_TEXT = "Welcome to WorkPilot AI";
+
+function useTypewriter(text: string, speed = 90, pause = 2000) {
+  const [display, setDisplay] = useState("");
+  useEffect(() => {
+    let i = 0;
+    let timeout: ReturnType<typeof setTimeout>;
+    const tick = () => {
+      if (i <= text.length) {
+        setDisplay(text.slice(0, i));
+        i++;
+        timeout = setTimeout(tick, speed);
+      } else {
+        timeout = setTimeout(() => {
+          i = 0;
+          setDisplay("");
+          timeout = setTimeout(tick, speed);
+        }, pause);
+      }
+    };
+    tick();
+    return () => clearTimeout(timeout);
+  }, [text, speed, pause]);
+  return display;
+}
 
 export const Route = createFileRoute("/")({
   head: () => ({
