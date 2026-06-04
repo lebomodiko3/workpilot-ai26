@@ -87,9 +87,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
     ],
     links: [
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" },
       { rel: "stylesheet", href: appCss },
     ],
   }),
@@ -119,18 +116,20 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <SidebarProvider>
-        <div className="flex min-h-screen w-full bg-background">
-          <AppSidebar />
-          <div className="flex min-h-screen flex-1 flex-col">
-            <header className="sticky top-0 z-20 flex h-14 items-center gap-3 border-b bg-background/80 px-4 backdrop-blur">
-              <SidebarTrigger />
-              <span className="text-sm font-medium text-muted-foreground">
-                AI Workplace Productivity Assistant
-              </span>
-            </header>
-            <main className="flex-1 overflow-auto">
-              <Outlet />
-            </main>
+        <div className="flex min-h-screen w-full bg-[#0d1b2a] p-4 md:p-8">
+          <div className="flex w-full max-w-[1600px] mx-auto border-4 border-[#1b4332] shadow-[16px_16px_0px_0px_#1b4332] overflow-hidden">
+            <AppSidebar />
+            <div className="flex min-h-[calc(100vh-4rem)] flex-1 flex-col">
+              <header className="sticky top-0 z-20 flex h-14 items-center gap-3 border-b-2 border-[#1b4332] bg-[#0d1b2a] px-6">
+                <SidebarTrigger className="text-[#73ffb8] hover:bg-[#1b4332]" />
+                <span className="font-display text-xs uppercase tracking-[0.2em] text-[#2dd4a8]">
+                  AI Workplace Productivity Assistant
+                </span>
+              </header>
+              <main className="flex-1 overflow-auto bg-[#0d1b2a]">
+                <Outlet />
+              </main>
+            </div>
           </div>
         </div>
       </SidebarProvider>
