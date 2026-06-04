@@ -5,7 +5,7 @@ AI-Powered Workplace Productivity Suite
 WorkPilot is a browser-based productivity assistant with 5 AI-powered modules: Email Generator, Meeting Summariser, Task Planner, Research Assistant, and AI Chat.
 
 ## Live Demo
-https://aidesk-pro-boost.lovable.app
+[https://aidesk-pro-boost.lovable.app](https://workpilot-ai26.lovable.app)
 
 ## Built With
 - Lovable.ai
