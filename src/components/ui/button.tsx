@@ -16,6 +16,8 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        neumorphic:
+          "bg-background text-foreground rounded-xl border border-border/40 transition-all duration-150 [box-shadow:6px_6px_14px_color-mix(in_oklab,var(--foreground)_18%,transparent),-6px_-6px_14px_color-mix(in_oklab,var(--background)_85%,white_60%)] hover:[box-shadow:4px_4px_10px_color-mix(in_oklab,var(--foreground)_16%,transparent),-4px_-4px_10px_color-mix(in_oklab,var(--background)_85%,white_60%)] active:translate-y-px active:[box-shadow:inset_4px_4px_10px_color-mix(in_oklab,var(--foreground)_22%,transparent),inset_-4px_-4px_10px_color-mix(in_oklab,var(--background)_85%,white_60%)]",
       },
       size: {
         default: "h-9 px-4 py-2",
