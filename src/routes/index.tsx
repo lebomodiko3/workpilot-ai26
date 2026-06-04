@@ -55,6 +55,10 @@ const tools: Tool[] = [
 ];
 
 function Dashboard() {
+  const typed = useTypewriter(FULL_TEXT);
+  const welcomePart = typed.slice(0, Math.min(typed.length, "Welcome to ".length));
+  const brandPart = typed.length > "Welcome to ".length ? typed.slice("Welcome to ".length) : "";
+
   return (
     <main className="relative overflow-hidden p-6 md:p-12">
       <div className="pointer-events-none absolute -right-20 -top-20 h-96 w-96 rounded-full bg-[#1b4332] opacity-20 blur-[120px]" />
@@ -62,10 +66,11 @@ function Dashboard() {
       {/* Welcome Banner */}
       <section className="relative z-10 mb-16 max-w-3xl">
         <h1 className="font-display mb-4 text-5xl uppercase leading-tight text-[#73ffb8] md:text-6xl">
-          Welcome to{" "}
+          {welcomePart}
           <span className="text-transparent" style={{ WebkitTextStroke: "1.5px #2dd4a8" }}>
-            WorkPilot AI
+            {brandPart}
           </span>
+          <span className="ml-1 inline-block w-[0.6ch] animate-pulse text-[#2dd4a8]">▍</span>
         </h1>
         <div className="border-l-8 border-[#2dd4a8] bg-[#1b4332] p-6 shadow-[8px_8px_0px_0px_#0d1b2a]">
           <p className="max-w-xl text-lg font-medium leading-relaxed text-[#73ffb8] underline decoration-[#2dd4a8] decoration-2 underline-offset-4">
