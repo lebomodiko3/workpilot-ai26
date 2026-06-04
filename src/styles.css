@@ -54,47 +54,50 @@
   --background: oklch(0.955 0.004 250);
   --foreground: oklch(0.22 0.03 264);
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.03 264);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.22 0.03 264);
+  --background: #0d1b2a;
+  --foreground: #73ffb8;
 
-  --primary: oklch(0.32 0.04 250);
-  --primary-foreground: oklch(0.98 0 0);
-  --primary-glow: oklch(0.42 0.05 250);
+  --card: #1b4332;
+  --card-foreground: #73ffb8;
+  --popover: #1b4332;
+  --popover-foreground: #73ffb8;
 
-  --secondary: oklch(0.96 0.01 260);
-  --secondary-foreground: oklch(0.30 0.04 264);
+  --primary: #2dd4a8;
+  --primary-foreground: #0d1b2a;
+  --primary-glow: #73ffb8;
 
-  --muted: oklch(0.42 0.01 260);
-  --muted-foreground: oklch(0.85 0.01 260);
+  --secondary: #1b4332;
+  --secondary-foreground: #73ffb8;
 
-  --accent: oklch(0.42 0.015 265);
-  --accent-foreground: oklch(0.97 0.005 260);
+  --muted: #1b4332;
+  --muted-foreground: #2dd4a8;
+
+  --accent: #2dd4a8;
+  --accent-foreground: #0d1b2a;
 
   --destructive: oklch(0.62 0.22 25);
-  --destructive-foreground: oklch(0.99 0 0);
+  --destructive-foreground: #0d1b2a;
 
-  --success: oklch(0.65 0.16 155);
+  --success: #2dd4a8;
   --warning: oklch(0.78 0.16 75);
 
-  --border: oklch(0.42 0.01 260);
-  --input: oklch(0.42 0.01 260);
-  --ring: oklch(0.55 0.20 266);
+  --border: #1b4332;
+  --input: #1b4332;
+  --ring: #2dd4a8;
 
-  --sidebar: oklch(0.22 0.04 265);
-  --sidebar-foreground: oklch(0.88 0.01 260);
-  --sidebar-primary: oklch(0.68 0.18 266);
-  --sidebar-primary-foreground: oklch(0.99 0 0);
-  --sidebar-accent: oklch(0.28 0.05 265);
-  --sidebar-accent-foreground: oklch(0.99 0 0);
-  --sidebar-border: oklch(0.30 0.04 265);
-  --sidebar-ring: oklch(0.68 0.18 266);
+  --sidebar: #0d1b2a;
+  --sidebar-foreground: #73ffb8;
+  --sidebar-primary: #2dd4a8;
+  --sidebar-primary-foreground: #0d1b2a;
+  --sidebar-accent: #1b4332;
+  --sidebar-accent-foreground: #73ffb8;
+  --sidebar-border: #1b4332;
+  --sidebar-ring: #2dd4a8;
 
-  --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-glow) 100%);
-  --gradient-subtle: linear-gradient(180deg, oklch(0.985 0.003 250) 0%, oklch(0.96 0.01 260) 100%);
-  --shadow-elegant: 0 10px 30px -10px color-mix(in oklab, var(--primary) 25%, transparent);
-  --shadow-card: 0 1px 3px 0 oklch(0 0 0 / 0.05), 0 1px 2px -1px oklch(0 0 0 / 0.05);
+  --gradient-primary: linear-gradient(135deg, #1b4332 0%, #0d1b2a 100%);
+  --gradient-subtle: linear-gradient(180deg, #0d1b2a 0%, #1b4332 100%);
+  --shadow-elegant: 16px 16px 0px 0px #1b4332;
+  --shadow-card: 8px 8px 0px 0px #2dd4a8;
 }
 
 .dark {
