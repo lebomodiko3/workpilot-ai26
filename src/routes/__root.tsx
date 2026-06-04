@@ -82,14 +82,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "WorkPilot AI — Workplace Productivity Assistant" },
       { name: "description", content: "AI-powered productivity suite: email generator, meeting summarizer, task planner, research, and chat." },
-      { property: "og:title", content: "WorkPilot AI — Workplace Productivity Assistant" },
-      { property: "og:description", content: "AI-powered productivity suite: email generator, meeting summarizer, task planner, research, and chat." },
+      { property: "og:title", content: "WorkPilot AI" },
+      { property: "og:description", content: "Automate daily work tasks with AI." },
       { property: "og:type", content: "website" },
-      { name: "twitter:title", content: "WorkPilot AI — Workplace Productivity Assistant" },
-      { name: "twitter:description", content: "AI-powered productivity suite: email generator, meeting summarizer, task planner, research, and chat." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/924887b6-c801-4e3c-81ec-7593c6eabff2/id-preview-507cdf75--f0619166-59d4-4c28-935a-5222e794e2b2.lovable.app-1780565403100.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/924887b6-c801-4e3c-81ec-7593c6eabff2/id-preview-507cdf75--f0619166-59d4-4c28-935a-5222e794e2b2.lovable.app-1780565403100.png" },
-      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -121,17 +116,17 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <SidebarProvider>
-        <div className="flex min-h-screen w-full bg-[#1a1a1a] p-4 md:p-8">
-          <div className="flex w-full max-w-[1600px] mx-auto border-4 border-[#2d2d2d] shadow-[16px_16px_0px_0px_#2d2d2d] overflow-hidden">
+        <div className="flex min-h-screen w-full bg-[#0d1b2a] p-4 md:p-8">
+          <div className="flex w-full max-w-[1600px] mx-auto border-4 border-[#1b4332] shadow-[16px_16px_0px_0px_#1b4332] overflow-hidden">
             <AppSidebar />
             <div className="flex min-h-[calc(100vh-4rem)] flex-1 flex-col">
-              <header className="sticky top-0 z-20 flex h-14 items-center gap-3 border-b-2 border-[#2d2d2d] bg-[#1a1a1a] px-6">
-                <SidebarTrigger className="text-[#f5f5f5] hover:bg-[#2d2d2d]" />
-                <span className="font-display text-xs uppercase tracking-[0.2em] text-[#e85d3a]">
+              <header className="sticky top-0 z-20 flex h-14 items-center gap-3 border-b-2 border-[#1b4332] bg-[#0d1b2a] px-6">
+                <SidebarTrigger className="text-[#73ffb8] hover:bg-[#1b4332]" />
+                <span className="font-display text-xs uppercase tracking-[0.2em] text-[#2dd4a8]">
                   AI Workplace Productivity Assistant
                 </span>
               </header>
-              <main className="flex-1 overflow-auto bg-[#1a1a1a]">
+              <main className="flex-1 overflow-auto bg-[#0d1b2a]">
                 <Outlet />
               </main>
             </div>

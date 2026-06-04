@@ -30,18 +30,18 @@ const tools: Tool[] = [
 function Dashboard() {
   return (
     <main className="relative overflow-hidden p-6 md:p-12">
-      <div className="pointer-events-none absolute -right-20 -top-20 h-96 w-96 rounded-full bg-[#2d2d2d] opacity-20 blur-[120px]" />
+      <div className="pointer-events-none absolute -right-20 -top-20 h-96 w-96 rounded-full bg-[#1b4332] opacity-20 blur-[120px]" />
 
       {/* Welcome Banner */}
       <section className="relative z-10 mb-16 max-w-3xl">
-        <h1 className="font-display mb-4 text-5xl uppercase leading-tight text-[#f5f5f5] md:text-6xl">
+        <h1 className="font-display mb-4 text-5xl uppercase leading-tight text-[#73ffb8] md:text-6xl">
           Welcome to{" "}
-          <span className="text-transparent" style={{ WebkitTextStroke: "1.5px #e85d3a" }}>
+          <span className="text-transparent" style={{ WebkitTextStroke: "1.5px #2dd4a8" }}>
             WorkPilot AI
           </span>
         </h1>
-        <div className="border-l-8 border-[#e85d3a] bg-[#2d2d2d] p-6 shadow-[8px_8px_0px_0px_#1a1a1a]">
-          <p className="max-w-xl text-lg font-medium leading-relaxed text-[#f5f5f5] underline decoration-[#e85d3a] decoration-2 underline-offset-4">
+        <div className="border-l-8 border-[#2dd4a8] bg-[#1b4332] p-6 shadow-[8px_8px_0px_0px_#0d1b2a]">
+          <p className="max-w-xl text-lg font-medium leading-relaxed text-[#73ffb8] underline decoration-[#2dd4a8] decoration-2 underline-offset-4">
             Your integrated AI productivity suite. Select a specialized module below to begin optimizing your workflow.
           </p>
         </div>
@@ -50,27 +50,27 @@ function Dashboard() {
       {/* Tool Grid: Broken Grid */}
       <div className="relative z-10 grid grid-cols-1 items-start gap-6 md:grid-cols-2 lg:grid-cols-3">
         {/* Card 1 */}
-        <Link to={tools[0].to} className="group block border-2 border-[#e85d3a] bg-[#2d2d2d] p-8 transition-transform hover:-translate-y-2">
+        <Link to={tools[0].to} className="group block border-2 border-[#2dd4a8] bg-[#1b4332] p-8 transition-transform hover:-translate-y-2">
           <CardInner tool={tools[0]} variant="solid" />
         </Link>
 
         {/* Card 2: shifted down */}
         <Link
           to={tools[1].to}
-          className="group block border-4 border-[#2d2d2d] bg-[#1a1a1a] p-8 shadow-[8px_8px_0px_0px_#e85d3a] transition-all hover:shadow-[12px_12px_0px_0px_#f5f5f5] md:mt-12"
+          className="group block border-4 border-[#1b4332] bg-[#0d1b2a] p-8 shadow-[8px_8px_0px_0px_#2dd4a8] transition-all hover:shadow-[12px_12px_0px_0px_#73ffb8] md:mt-12"
         >
           <CardInner tool={tools[1]} variant="outline" />
         </Link>
 
         {/* Card 3 */}
-        <Link to={tools[2].to} className="group block border-2 border-[#f5f5f5] bg-[#2d2d2d] p-8 transition-transform hover:-translate-x-2">
+        <Link to={tools[2].to} className="group block border-2 border-[#73ffb8] bg-[#1b4332] p-8 transition-transform hover:-translate-x-2">
           <CardInner tool={tools[2]} variant="glow" italic />
         </Link>
 
         {/* Card 4: overlap up */}
         <Link
           to={tools[3].to}
-          className="group block border-2 border-[#e85d3a] bg-[#2d2d2d] p-8 shadow-[12px_-12px_0px_0px_#1a1a1a] transition-transform hover:scale-105 md:-mt-8 md:ml-8"
+          className="group block border-2 border-[#2dd4a8] bg-[#1b4332] p-8 shadow-[12px_-12px_0px_0px_#0d1b2a] transition-transform hover:scale-105 md:-mt-8 md:ml-8"
         >
           <CardInner tool={tools[3]} variant="solid" italic />
         </Link>
@@ -78,23 +78,23 @@ function Dashboard() {
         {/* Card 5 */}
         <Link
           to={tools[4].to}
-          className="group block border-b-8 border-r-8 border-[#2d2d2d] bg-[#1a1a1a] p-8 transition-colors hover:border-[#e85d3a]"
+          className="group block border-b-8 border-r-8 border-[#1b4332] bg-[#0d1b2a] p-8 transition-colors hover:border-[#2dd4a8]"
         >
           <CardInner tool={tools[4]} variant="ghost" />
         </Link>
       </div>
 
       {/* Disclaimer Footer */}
-      <footer className="relative z-10 mt-16 flex flex-wrap items-center justify-between gap-4 border-t-2 border-[#2d2d2d] pt-8">
+      <footer className="relative z-10 mt-16 flex flex-wrap items-center justify-between gap-4 border-t-2 border-[#1b4332] pt-8">
         <div className="flex items-center gap-4">
-          <span className="bg-[#2d2d2d] px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-[#f5f5f5]">
+          <span className="bg-[#1b4332] px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-[#73ffb8]">
             Advisory
           </span>
-          <p className="text-xs font-medium italic text-[#e85d3a] opacity-60">
+          <p className="text-xs font-medium italic text-[#2dd4a8] opacity-60">
             AI-generated content may require human verification prior to implementation.
           </p>
         </div>
-        <div className="font-display select-none text-4xl text-[#2d2d2d]">V2.0.4</div>
+        <div className="font-display select-none text-4xl text-[#1b4332]">V2.0.4</div>
       </footer>
     </main>
   );
@@ -111,10 +111,10 @@ function CardInner({
 }) {
   const Icon = tool.icon;
   const badge = {
-    solid: "bg-[#e85d3a] text-[#1a1a1a]",
-    outline: "border-2 border-[#e85d3a] text-[#e85d3a]",
-    glow: "bg-[#f5f5f5] text-[#1a1a1a]",
-    ghost: "bg-[#2d2d2d] text-[#f5f5f5]",
+    solid: "bg-[#2dd4a8] text-[#0d1b2a]",
+    outline: "border-2 border-[#2dd4a8] text-[#2dd4a8]",
+    glow: "bg-[#73ffb8] text-[#0d1b2a]",
+    ghost: "bg-[#1b4332] text-[#73ffb8]",
   }[variant];
 
   return (
@@ -123,13 +123,13 @@ function CardInner({
         <Icon className="h-6 w-6" />
       </div>
       <h3
-        className={`font-display mb-2 text-xl uppercase text-[#f5f5f5] ${italic ? "italic" : ""}`}
+        className={`font-display mb-2 text-xl uppercase text-[#73ffb8] ${italic ? "italic" : ""}`}
       >
         {tool.title[0]}
         <br />
         {tool.title[1]}
       </h3>
-      <p className="text-sm leading-snug text-[#e85d3a]">{tool.desc}</p>
+      <p className="text-sm leading-snug text-[#2dd4a8]">{tool.desc}</p>
     </>
   );
 }

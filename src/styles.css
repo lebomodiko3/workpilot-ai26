@@ -54,50 +54,50 @@
   --background: oklch(0.955 0.004 250);
   --foreground: oklch(0.22 0.03 264);
 
-  --background: #1a1a1a;
-  --foreground: #f5f5f5;
+  --background: #0d1b2a;
+  --foreground: #73ffb8;
 
-  --card: #2d2d2d;
-  --card-foreground: #f5f5f5;
-  --popover: #2d2d2d;
-  --popover-foreground: #f5f5f5;
+  --card: #1b4332;
+  --card-foreground: #73ffb8;
+  --popover: #1b4332;
+  --popover-foreground: #73ffb8;
 
-  --primary: #e85d3a;
-  --primary-foreground: #1a1a1a;
-  --primary-glow: #f5f5f5;
+  --primary: #2dd4a8;
+  --primary-foreground: #0d1b2a;
+  --primary-glow: #73ffb8;
 
-  --secondary: #2d2d2d;
-  --secondary-foreground: #f5f5f5;
+  --secondary: #1b4332;
+  --secondary-foreground: #73ffb8;
 
-  --muted: #2d2d2d;
-  --muted-foreground: #e85d3a;
+  --muted: #1b4332;
+  --muted-foreground: #2dd4a8;
 
-  --accent: #e85d3a;
-  --accent-foreground: #1a1a1a;
+  --accent: #2dd4a8;
+  --accent-foreground: #0d1b2a;
 
   --destructive: oklch(0.62 0.22 25);
-  --destructive-foreground: #1a1a1a;
+  --destructive-foreground: #0d1b2a;
 
-  --success: #e85d3a;
+  --success: #2dd4a8;
   --warning: oklch(0.78 0.16 75);
 
-  --border: #2d2d2d;
-  --input: #2d2d2d;
-  --ring: #e85d3a;
+  --border: #1b4332;
+  --input: #1b4332;
+  --ring: #2dd4a8;
 
-  --sidebar: #1a1a1a;
-  --sidebar-foreground: #f5f5f5;
-  --sidebar-primary: #e85d3a;
-  --sidebar-primary-foreground: #1a1a1a;
-  --sidebar-accent: #2d2d2d;
-  --sidebar-accent-foreground: #f5f5f5;
-  --sidebar-border: #2d2d2d;
-  --sidebar-ring: #e85d3a;
+  --sidebar: #0d1b2a;
+  --sidebar-foreground: #73ffb8;
+  --sidebar-primary: #2dd4a8;
+  --sidebar-primary-foreground: #0d1b2a;
+  --sidebar-accent: #1b4332;
+  --sidebar-accent-foreground: #73ffb8;
+  --sidebar-border: #1b4332;
+  --sidebar-ring: #2dd4a8;
 
-  --gradient-primary: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
-  --gradient-subtle: linear-gradient(180deg, #1a1a1a 0%, #2d2d2d 100%);
-  --shadow-elegant: 16px 16px 0px 0px #2d2d2d;
-  --shadow-card: 8px 8px 0px 0px #e85d3a;
+  --gradient-primary: linear-gradient(135deg, #1b4332 0%, #0d1b2a 100%);
+  --gradient-subtle: linear-gradient(180deg, #0d1b2a 0%, #1b4332 100%);
+  --shadow-elegant: 16px 16px 0px 0px #1b4332;
+  --shadow-card: 8px 8px 0px 0px #2dd4a8;
 }
 
 .dark {
