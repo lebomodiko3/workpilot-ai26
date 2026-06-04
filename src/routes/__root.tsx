@@ -8,6 +8,9 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
+import { Toaster } from "@/components/ui/sonner";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -48,7 +51,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
           This page didn't load
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
+          Something went wrong. Try again or head home.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
@@ -77,20 +80,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "WorkPilot AI — Workplace Productivity Assistant" },
+      { name: "description", content: "AI-powered productivity suite: email generator, meeting summarizer, task planner, research, and chat." },
+      { property: "og:title", content: "WorkPilot AI" },
+      { property: "og:description", content: "Automate daily work tasks with AI." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" },
+      { rel: "stylesheet", href: appCss },
     ],
   }),
   shellComponent: RootShell,
@@ -118,8 +118,23 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <SidebarProvider>
+        <div className="flex min-h-screen w-full bg-background">
+          <AppSidebar />
+          <div className="flex min-h-screen flex-1 flex-col">
+            <header className="sticky top-0 z-20 flex h-14 items-center gap-3 border-b bg-background/80 px-4 backdrop-blur">
+              <SidebarTrigger />
+              <span className="text-sm font-medium text-muted-foreground">
+                AI Workplace Productivity Assistant
+              </span>
+            </header>
+            <main className="flex-1 overflow-auto">
+              <Outlet />
+            </main>
+          </div>
+        </div>
+      </SidebarProvider>
+      <Toaster richColors position="top-right" />
     </QueryClientProvider>
   );
 }
