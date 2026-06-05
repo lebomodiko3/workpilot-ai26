@@ -49,7 +49,7 @@ const tools: Tool[] = [
 ];
 
 function Dashboard() {
-  const typed = useTypewriter(FULL_TEXT);
+  const { display: typed, done } = useTypewriter(FULL_TEXT);
   const welcomePart = typed.slice(0, Math.min(typed.length, "Welcome to ".length));
   const brandPart = typed.length > "Welcome to ".length ? typed.slice("Welcome to ".length) : "";
 
