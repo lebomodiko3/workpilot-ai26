@@ -64,7 +64,7 @@ function Dashboard() {
           <span className="text-transparent" style={{ WebkitTextStroke: "1.5px #2dd4a8" }}>
             {brandPart}
           </span>
-          <span className="ml-1 inline-block w-[0.6ch] animate-pulse text-[#2dd4a8]">▍</span>
+          {!done && <span className="ml-1 inline-block w-[0.6ch] animate-pulse text-[#2dd4a8]">▍</span>}
         </h1>
         <div className="border-l-8 border-[#2dd4a8] bg-[#1b4332] p-6 shadow-[8px_8px_0px_0px_#0d1b2a]">
           <p className="max-w-xl text-lg font-medium leading-relaxed text-[#73ffb8] underline decoration-[#2dd4a8] decoration-2 underline-offset-4">
