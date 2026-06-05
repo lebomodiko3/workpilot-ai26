@@ -4,28 +4,22 @@ import { useEffect, useState } from "react";
 
 const FULL_TEXT = "Welcome to WorkPilot AI";
 
-function useTypewriter(text: string, speed = 90, pause = 2000) {
+function useTypewriter(text: string, speed = 90) {
   const [display, setDisplay] = useState("");
+  const [done, setDone] = useState(false);
   useEffect(() => {
     let i = 0;
-    let timeout: ReturnType<typeof setTimeout>;
-    const tick = () => {
-      if (i <= text.length) {
-        setDisplay(text.slice(0, i));
-        i++;
-        timeout = setTimeout(tick, speed);
-      } else {
-        timeout = setTimeout(() => {
-          i = 0;
-          setDisplay("");
-          timeout = setTimeout(tick, speed);
-        }, pause);
+    const id = setInterval(() => {
+      i++;
+      setDisplay(text.slice(0, i));
+      if (i >= text.length) {
+        clearInterval(id);
+        setDone(true);
       }
-    };
-    tick();
-    return () => clearTimeout(timeout);
-  }, [text, speed, pause]);
-  return display;
+    }, speed);
+    return () => clearInterval(id);
+  }, [text, speed]);
+  return { display, done };
 }
 
 export const Route = createFileRoute("/")({
