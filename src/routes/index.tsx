@@ -4,28 +4,22 @@ import { useEffect, useState } from "react";
 
 const FULL_TEXT = "Welcome to WorkPilot AI";
 
-function useTypewriter(text: string, speed = 90, pause = 2000) {
+function useTypewriter(text: string, speed = 90) {
   const [display, setDisplay] = useState("");
+  const [done, setDone] = useState(false);
   useEffect(() => {
     let i = 0;
-    let timeout: ReturnType<typeof setTimeout>;
-    const tick = () => {
-      if (i <= text.length) {
-        setDisplay(text.slice(0, i));
-        i++;
-        timeout = setTimeout(tick, speed);
-      } else {
-        timeout = setTimeout(() => {
-          i = 0;
-          setDisplay("");
-          timeout = setTimeout(tick, speed);
-        }, pause);
+    const id = setInterval(() => {
+      i++;
+      setDisplay(text.slice(0, i));
+      if (i >= text.length) {
+        clearInterval(id);
+        setDone(true);
       }
-    };
-    tick();
-    return () => clearTimeout(timeout);
-  }, [text, speed, pause]);
-  return display;
+    }, speed);
+    return () => clearInterval(id);
+  }, [text, speed]);
+  return { display, done };
 }
 
 export const Route = createFileRoute("/")({
@@ -55,7 +49,7 @@ const tools: Tool[] = [
 ];
 
 function Dashboard() {
-  const typed = useTypewriter(FULL_TEXT);
+  const { display: typed, done } = useTypewriter(FULL_TEXT);
   const welcomePart = typed.slice(0, Math.min(typed.length, "Welcome to ".length));
   const brandPart = typed.length > "Welcome to ".length ? typed.slice("Welcome to ".length) : "";
 
@@ -70,7 +64,7 @@ function Dashboard() {
           <span className="text-transparent" style={{ WebkitTextStroke: "1.5px #2dd4a8" }}>
             {brandPart}
           </span>
-          <span className="ml-1 inline-block w-[0.6ch] animate-pulse text-[#2dd4a8]">▍</span>
+          {!done && <span className="ml-1 inline-block w-[0.6ch] animate-pulse text-[#2dd4a8]">▍</span>}
         </h1>
         <div className="border-l-8 border-[#2dd4a8] bg-[#1b4332] p-6 shadow-[8px_8px_0px_0px_#0d1b2a]">
           <p className="max-w-xl text-lg font-medium leading-relaxed text-[#73ffb8] underline decoration-[#2dd4a8] decoration-2 underline-offset-4">
